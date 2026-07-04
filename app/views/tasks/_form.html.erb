@@ -1,0 +1,13 @@
+<%= form_with model: task do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+  <%= f.label :completed %>
+  <%= f.check_box :completed %>
+  <%= f.submit %>
+<% end %>
+
+
+<p>check_box does NOT take a label string as the second argument
+  So it tries to interpret "Completed?"as a hash of options, but it's a string</p>
